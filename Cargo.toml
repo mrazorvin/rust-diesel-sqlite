@@ -1,0 +1,13 @@
+[package]
+name = "rust-diesel-sqlite"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rusqlite = { version = "0.31.0", features = ["bundled"] }
+diesel = { version = "2.2.0", features = ["sqlite"] }
+
+[build-dependencies]
+rusqlite = { version = "0.31.0", features = ["bundled"] }
+diesel = { version = "2.2.0", features = ["sqlite"] }
+diesel_migrations = { version = "2.2.0" }
