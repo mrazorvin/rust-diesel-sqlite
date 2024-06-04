@@ -12,8 +12,8 @@ pub(crate) fn get_posts() -> Select<posts::table, AsSelect<Post, Sqlite>> {
     posts::table.select(Post::as_select())
 }
 
-pub(crate) fn by_title<'a>(
+pub(crate) fn by_title(
     name: &str,
-) -> Box<dyn BoxableExpression<posts::table, Sqlite, SqlType = diesel::sql_types::Bool> + 'a> {
+) -> Box<dyn BoxableExpression<posts::table, Sqlite, SqlType = diesel::sql_types::Bool> + '_> {
     Box::new(posts::dsl::title.like(format!("%{name}%")))
 }
