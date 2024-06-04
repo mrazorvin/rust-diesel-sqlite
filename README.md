@@ -1,6 +1,8 @@
 # Rust + Diesel + Sqlite example
 
-to run example use `cargo run um` or `cargo build --release` to build production executable
+To run example use `cargo run um` or `cargo build --release` to build production executable
+
+Diesel migrations will be applied by `build.rs` script
 
 ## Used Tools & Commands 
 * Diesel CLI
